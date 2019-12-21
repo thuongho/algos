@@ -1,0 +1,5 @@
+Big O Rule
+1. Worse case
+2. Remove constants
+3. Diff terms for Input
+4. drop non dominant
