@@ -67,3 +67,12 @@ Map
 Set
 - const b = new Set()
 - only store keys
+
+Hash
+- pros
+-- fast lookups
+-- fast inserts
+-- flexible lookup keys
+- cons
+-- unordered
+-- slow key iteration cuz it has to look up the whole table
