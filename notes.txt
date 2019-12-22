@@ -76,3 +76,28 @@ Hash
 - cons
 -- unordered
 -- slow key iteration cuz it has to look up the whole table
+
+LinkedList
+- pros
+-- fast insertion
+-- fast deletion
+-- ordered
+-- flexible size
+- cons
+-- slow lookup
+-- more memory
+
+Arrays
+- cache locality
+-- accessing their items in memory faster because they are next to each other
+
+Static Array
+- once you reach the limit of that array, it needs to double up in memory to expand
+
+
+How does JS work
+Explain the diff between async vs sync
+Js is a single threaded language that can be non-blocking
+
+what is a program
+- revisit this video
