@@ -39,3 +39,31 @@ etc.. What is the main goal?
 [ ] Look at the Time vs Space tradeoff. Sometimes storing extra state in memory can help the time. (Runtime)
 [ ] If the interviewer is giving you advice/tips/hints. Follow them
 [ ] Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you can get a time optimization to the process. In programming, you often times can use up a little bit more space to get faster time
+
+
+Arrays
+- pros
+-- fast lookup
+-- fast push/pop
+-- ordered
+- cons
+-- slow inserts
+-- slow deletes
+-- fixed size if using static arrays
+
+Hash tables
+- collisions
+-- lookup goes from O(1) to O(n)
+-- take up same memory space
+-- use linked list
+
+ES6
+hash object
+- only strings as keys
+Map
+- const a = new Map()
+- lets you save functions as keys or whatever
+- maintains insertion order
+Set
+- const b = new Set()
+- only store keys
