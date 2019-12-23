@@ -127,3 +127,70 @@ Binary Search Tree
 -- better than O(n)
 - cons
 -- no O(1)
+
+
+Red Black tree
+- auto balance itself
+- https://www.cs.usfca.edu/~galles/visualization/RedBlack.html
+
+AVL tree
+- auto balance itself
+- https://visualgo.net/en/bst
+
+Binary Heap
+- max heap
+-- root is the biggest number
+- min heap
+-- root is the smallest number
+- balance
+- no rules for left and right
+- left and right can be any number as long as it is less than root
+
+Priority queue
+- left to right insertion
+- move bigger number / higher priority up
+- similar to airline with captain as priority over passenger eventhough the passenger came first
+
+Binary Heap
+- pros
+-- better than O(n)
+-- priority
+-- flexible size
+-- fast insert
+- cons
+-- slow lookup
+- insert and delete is O(log n)
+
+Trie
+- contains empty root
+- letters in nodes with child that forms words
+- good for word search like google search
+- if u know the length of the word, fast search
+- looking car with 3 letters
+-- find c, then go down child with depth of 3
+
+
+Graphs
+- cyclic
+-- connected
+-- nodes form a closed connection
+- acyclic
+-- not connected
+- weighted
+-- edges have numbers on it
+-- google maps to find shortest path
+- undirected
+-- nodes can go both ways
+- directed
+-- nodes go in one direction
+
+Edge List
+- shows the edges that connects the nodes
+Adjacent list
+Adjacent matrix
+
+Graphs
+- pros
+-- relationship
+- cons
+-- scaling is hard
