@@ -1,4 +1,4 @@
-Big O Rule
+Big O Rule Asymptotic Analysis
 1. Worse case
 2. Remove constants
 3. Diff terms for Input
@@ -101,3 +101,29 @@ Js is a single threaded language that can be non-blocking
 
 what is a program
 - revisit this video
+
+Stacks & Queues
+- pros
+-- fast peek
+-- fast operations
+-- ordered
+- cons
+-- slow lookup
+
+
+Trees
+
+Balanced
+- O(log n)
+
+Unbalanced
+- O(n)
+- it is similar to linked list
+
+Binary Search Tree
+- pros
+-- ordered
+-- flexible size
+-- better than O(n)
+- cons
+-- no O(1)
