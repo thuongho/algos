@@ -194,3 +194,15 @@ Graphs
 -- relationship
 - cons
 -- scaling is hard
+
+
+Recursion
+- Tail Call optimization
+- everytime we're using tree or converting into tree
+- divide a problem into smaller subproblems that are smaller instances of the same problem
+- each instance of the subproblem is identical in nature
+- the solutions of each subproblem can be combined to solve the problem at hand
+- Merge Sort
+- Quick Sort
+- Tree Traversal
+- Graph Traversal
