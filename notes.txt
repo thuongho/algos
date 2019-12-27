@@ -206,3 +206,9 @@ Recursion
 - Quick Sort
 - Tree Traversal
 - Graph Traversal
+
+Sorting
+https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
+
+Insertion Sort
+- use when data set is small or if the data set is nearly sorted
