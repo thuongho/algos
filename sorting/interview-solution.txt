@@ -1,0 +1,46 @@
+//#1 - Sort 10 schools around your house by distance:
+- insertion sort
+- small data set
+- easy to code
+- could be that the list is almost already sorted
+- space complexity of O(1)
+
+//#2 - eBay sorts listings by the current Bid amount:
+- radix sort or counting sort
+- it can beat O(n log(n))
+- the numbers is in a set range from 0 to 50,000
+
+//#3 - Sport scores on ESPN
+- Quick sort
+- maybe there are a lot of formats and numbers are not sorted
+- space complexity is O(log n)
+
+//#4 - Massive database (can't fit all into memory) needs to sort through past year's user data
+- seems like we are not going to use in memory cuz the data is so big
+- space is relative
+- Merge Sort because I don't want to have worst case of O(n^2) for time complexity
+- I know that the sort at worst will only be O(nlog(n))
+
+//#5 - Almost sorted Udemy review data needs to update and add 2 new reviews
+- insertion sort
+- almost sorted are fast with insertion sort
+- might be a massive list that is already pre-sorted and I only need to add 2 more reviews
+
+//#6 - Temperature Records for the past 50 years in Canada
+- radix or counting if there are no decimal places
+- if the data has accurate temperatures with decimal places, then I will use quick sort
+- quick sort with O(log n) will save space for in memory sorting
+
+//#7 - Large user name database needs to be sorted. Data is very random.
+- we don't really have enough data here
+- maybe I'll use merge sort if we have enough memory and memory is not too expensive
+- or I'll use quick sort
+-- and I can choose a good pivot point
+-- Maybe the data isn't too big and O(log(n)) it will save on memory
+
+//#8 - You want to teach sorting for the first time
+- bubble sort and selection sort
+
+JS.sort()
+- Mozilla uses mergesort
+- Chrome V8 uses quick sort and insertion sort for smaller arrays

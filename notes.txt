@@ -212,3 +212,28 @@ https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for
 
 Insertion Sort
 - use when data set is small or if the data set is nearly sorted
+- small and nearly sorted it is the fastest
+
+Merge Sort
+- divide and conquer
+- break down the middle to left and right
+- recursively break down until one item
+
+Quick Sort
+- divide and conquer
+- chooses one pivot point and then moves smaller number to the left and bigger to the right
+- O(n log n) for time if pivot is somewhere in the middle
+- worse case scenario if pivot is chose as the lowest or highest, then iterate through the whole list using (On^2) time and O(n log n) space
+exercise: https://repl.it/@aneagoie/quickSort-exercise
+solution: https://repl.it/@aneagoie/quickSort
+
+Comparison Sort
+- Bubble
+- Insertion Sort
+- Selection Sort
+- Merge Sort
+- Quick Sort
+
+Non-comparison Sort
+- Counting Sort
+- Radix Sort
