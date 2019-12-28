@@ -1,0 +1,24 @@
+//If you know a solution is not far from the root of the tree:
+- BFS
+- shortest path
+- cuz it searches the closes node to the parent first
+
+
+//If the tree is very deep and solutions are rare: 
+- BFS
+- only cuz DFS will take really long if the tree is really deep
+- although with BFS, memory might be of a concern
+
+//If the tree is very wide:
+- DFS
+- cuz BFS will take too much memory where it has to keep track of the current nodes in queue
+
+//If solutions are frequent but located deep in the tree:
+- DFS
+
+//Determining whether a path exists between two nodes:
+- DFS
+- it is built for find a path between nodes
+
+//Finding the shortest path:
+- DFS
