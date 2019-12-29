@@ -237,3 +237,121 @@ Comparison Sort
 Non-comparison Sort
 - Counting Sort
 - Radix Sort
+
+
+Traversals
+DFS
+//     9
+//  4     20
+//1  6  15  170
+InOrder: [1, 4, 6, 9, 15, 20, 170]
+PreOrder: [9, 4, 1, 6, 20, 15, 170]
+PostOrder: [1, 6, 4, 15, 170, 20, 9]
+space complexity is the height of the tree
+
+Graphs
+- BFS
+-- shortest path
+- DFS
+-- does something exist
+-- can get really slow, the deeper the graph, the more recursions add, 
+-- the more space complexity cuz we have to keep track of all the function calls on the stack
+
+Shortest path
+- Bellman Ford algo is more effective than Dijkstra's algo cuz Bellman can account for negative edge
+-- O(n^2)
+-- not efficient and not fast
+- Dijkstra
+-- a little more efficient and faster
+-- just can't handle negative numbers
+https://medium.com/basecs/finding-the-shortest-path-with-a-little-help-from-dijkstra-613149fbdc8e
+
+
+Dynamic programming
+- divide & conquer + memoization
+1. can be divided into subproblem
+2. recursive solution
+3. are there repetitive subproblems
+4. memoize subproblems
+5. demand a raise from your boss
+
+
+4 Heroes
+- Technical
+- Successful
+- Leadership
+- Challenge
+
+Tell me about yourself
+- your triggers of success
+- mention things you want to be asked
+- skills should be relevant to the job
+- answer in about a minute
+- hero journey where you go from very little skill to someone they want to hire
+
+Why us?
+- make them feel special
+- I've been researching your company and you did x. I worked on y project and relate it
+- show you want to grow
+- demonstrate why you are the best
+
+Why did you leave your last company?
+- no negativity
+- show them you want to grow
+- this is the best opportunity to grow
+- show them why you are the best
+
+Tell me about a problem and how you solved it
+- have this prepared
+- have metrics and numbers
+- scaling performance security
+- ideally a big project from the past company u worked with
+- SAR (situation action result)
+
+Tell me about an interesting project
+- show how you are different
+- relate it to the job
+
+What is your biggest weakness
+- sometimes I dive into coding too fast and it might not always come to the best answer
+- now I'm writing pseudo codes before I write real code
+- helps me visualize the 
+
+Any questions for me?
+- focus on them, YOU
+- mention something they mentioned
+1. what's the biggest mistake you've made during ur first month of the job and what did you do to fix it
+2. where do u see this company going in the next 3 years
+- you worked here for awhile and I want to see where this company is headed
+3. why did you join this company
+4. have you seen your skills grow in the past few years
+5. the one time you messed up and how it was handled by the company
+6. whats the one you wished someone told you when you first started working for the company
+
+https://github.com/viraptor/reverse-interview
+
+Secret weapon
+- simplicity over complexity
+-- when you work on a project with coworkers, you want to make code readable and not overcomplicate things
+-- you want to make sure that the code is readable and maintainable long after you
+- premature optimization is the root of all evil
+-- don't be obsessed with optimization if the time spent on it is only 1% increase
+- overall goal, not myopic
+-- see the overall goal and not by narrowminded
+-- the client wants to have a dashboard by a deadline to showcase for a meeting with the higherups
+-- I organized a meeting with the coworkers and focus on delivery. It wasn't the most efficient code at delivery, but we 
+were able to deliver a working product that allowed us to gain approval from higher ups that lead to long term contracts
+-- once delivered we came back and refactored the code to be more efficient
+- No complaining about client/code/etc
+- No ego
+-- we work as a team, take constructive feedback
+
+After the interview
+- thank the interviewer, recruiter
+- doesn't hurt to ask for feedback so that u can improve
+- when you will hear back
+- don't overuse "I"
+- talk bout the interviewer
+- express how you are the ideal candidate
+- don't brag
+- watch the video for a closing statement of how much you want the job

@@ -130,7 +130,6 @@ class BinarySearchTree {
       }
     }
   }
-
   // implement BFS
   breathFirstSearch() {
     // ref queue
@@ -173,6 +172,51 @@ class BinarySearchTree {
     }
     return this.breathFirstSearchR(queue, list);
   }
+
+  dFSInOrder() {
+    return traverseInOrder(this.root, []);
+  }
+
+  dFSPreOrder() {
+    return traversePreOrder(this.root, []);
+  }
+
+  dFSPostOrder() {
+    return traversePostOrder(this.root, []);
+  }
+}
+
+function traverseInOrder(node, list) {
+  if (node.left) {
+    traverseInOrder(node.left, list);
+  }
+  list.push(node.value);
+  if (node.right) {
+    traverseInOrder(node.right, list);
+  }
+  return list;
+}
+
+function traversePreOrder(node, list) {
+  list.push(node.value);
+  if (node.left) {
+    traversePreOrder(node.left, list);
+  }
+  if (node.right) {
+    traversePreOrder(node.right, list);
+  }
+  return list;
+}
+
+function traversePostOrder(node, list) {
+  if (node.left) {
+    traversePostOrder(node.left, list);
+  }
+  if (node.right) {
+    traversePostOrder(node.right, list);
+  }
+  list.push(node.value);
+  return list;
 }
 
 const tree = new BinarySearchTree();
@@ -184,8 +228,12 @@ tree.insert(170)
 tree.insert(15)
 tree.insert(1)
 tree.remove(170)
-JSON.stringify(traverse(tree.root))
-tree.breathFirstSearchR([tree.root], []);
+// JSON.stringify(traverse(tree.root))
+// tree.breathFirstSearch();
+// tree.breathFirstSearchR([tree.root], []);
+console.log(tree.dFSInOrder());
+console.log(tree.dFSPreOrder());
+console.log(tree.dFSPostOrder());
 
 //     9
 //  4     20
