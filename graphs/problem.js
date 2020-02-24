@@ -20,7 +20,7 @@ class Graph {
       } 
       console.log(node + "-->" + connections); 
     } 
-} 
+  }
 } 
 
 const myGraph = new Graph();

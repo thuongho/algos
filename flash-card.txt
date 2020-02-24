@@ -1,0 +1,69 @@
+
+TREE TRAVERSAL
+BFS vs DFS
+- time complexity is the same O(n)
+- using a queue 
+- if it is wider than deep
+-- DFS uses less space, fewer nodes to keep track of
+-- time is the same as it will visit each node
+- if it is skewed like a linked list
+-- BFS takes less space
+
+     9
+  4     20
+1  6  15  170
+DFSPreOrder [9, 4, 1, 6, 20, 15, 170]
+DFSPostOrder [1, 6, 4, 15, 170, 20, 9]
+DFSInOrder [1, 4, 6, 9, 15, 20, 170]
+
+DFS
+- InOrder
+-- side effect returns sorted list of nodes 
+- PreOrder
+-- if you want to flatten it out and serialize it in that order
+
+BINARY HEAP
+Heaps can be stored in an array
+- 0 index is always root parent
+- to find children of a parent
+-- Left 2n + 1
+-- Right 2n + 2
+-- n is index
+- to find parent
+-- Math.floor((n - 1) / 2)
+
+priority queue
+- use min or max binary Heap
+- use node with value and priority
+- if priority are the same, add timestamp to node attribute to access for comparison
+
+Big O
+- Insertion O(log n)
+-- add in a number, lets say max number, it just compares to parents and not every child
+- Removal O(log n)
+- Search O(n)
+
+
+GRAPHS
+Adjacency Matrix
+   A B C D
+A [0,1,0,1]
+B [1,0,1,0]
+C [0,1,0,1]
+D [1,0,1,0]
+- takes up more space
+- slower to iterate over all edges
+- faster to look up specific edges
+
+Adjacency List
+[
+0 [1,5],
+1 [0,2],
+2 [1,3],
+3 [2,4],
+4 [3,5],
+5 [4,0]
+]
+- can take up less space
+- faster iterate over all edges
+- slower to look up specific edges

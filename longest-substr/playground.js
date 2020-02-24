@@ -52,3 +52,37 @@ var lengthOfLongestSubstring = function(s) {
   }
   return max;
 };
+
+
+// sliding window
+// input str output number
+/*
+    seen: {t: 0, h: 1, i: 4, s: 5, a: 6, w: 7, e: 8}
+    longestStr: 4
+*/
+function findLongestSubstring(str){
+  // check input type string, no params
+//   pointers
+let start = 0;
+let end = 0;
+// cache
+let seen = {};
+// longest substring int
+let longestStr = 0;
+// loop to end of string
+while (end < str.length) {
+    // check seen to see if char exist
+    const char = str[end];
+    if (seen[char]) {
+        // move start to end
+      start = Math.max(start, seen[char]);
+    }
+    // check longest substring
+        longestStr = Math.max(longestStr, end - start);
+    // update seen
+    seen[char] = end;
+    end++;
+}
+// return longest string
+return longestStr;
+}
