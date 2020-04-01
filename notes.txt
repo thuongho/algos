@@ -4,6 +4,16 @@ Big O Rule Asymptotic Analysis
 3. Diff terms for Input
 4. drop non dominant
 
+- The 3 pillars of good code -
+1. Readable
+2. Time Complexity
+3. Space Complexity
+
+- What skills interviewer is looking for-
+- Analytic skills - how can you think through problems and analyze things?
+- Coding skills - do you code well, by writing clean, simple, organized, readable code?
+- Technical knowledge - do you know the fundamentals of the job you're applying for?
+- Communication skills - does your personality match the companies' culture?
 
 -= How to solve a problem =-
 1. When the interviewer says the question, write down the key points at the top (i.e. sorted array). Make sure you have all the details. Show how organized you are.
@@ -40,6 +50,53 @@ etc.. What is the main goal?
 [ ] If the interviewer is giving you advice/tips/hints. Follow them
 [ ] Space time tradeoffs: Hastables usually solve this a lot of the times. You use more space, but you can get a time optimization to the process. In programming, you often times can use up a little bit more space to get faster time
 
+Space Complexity
+- when a program executes, it has two ways to remember things
+- heap
+-- stores variables
+- stack
+-- stores function calls
+
+What causes space complexity?
+- variables
+- data structures
+- function calls
+- allocation
+
+CPU
+- runs the computer
+- has a really small cache 
+- a common cache is called LRU Cache
+
+RAM
+- for computers to run code, need to keep track of variables
+- volatile
+- cpu access RAM faster
+- massive storage area
+- has shelves that are numbered (address)
+- each shelf holds 8 bits
+- 8 bits is a byte
+- cpu is connected to a memory controller that does the read/write of the RAM
+- the memory controller allows the cpu to access any address randomly instantly like a hash
+- memory addresses that are close to each other are read faster (speed boost)
+- a variable is stored in 32 bits or 4 addresses
+- systems that are 8 bits can hold 255 11111111
+- 16 bit 65,536
+- integer overflow
+- JS technically doesn't have int, it only has 64-bits floats
+- Math.pow()
+-- function that returns base to exponent
+- Math.pow(6, 1000) >> Infinity
+-- as the number becomes too big for RAM
+
+Why is Data Structures important?
+- we are thinking of the low level on how to make it faster and more efficient
+
+Storage
+- stores files
+- permanent
+- persistent storage is slow
+- when computer shuts down it stores the application into storage
 
 Arrays
 - pros
@@ -50,6 +107,53 @@ Arrays
 -- slow inserts
 -- slow deletes
 -- fixed size if using static arrays
+- JS uses dynamic array, but sometimes under the hood it might copy the array by looping and build a larger array
+-- sometimes append can be O(n)
+
+Reference
+- primitive type
+-- type created by JS/ES
+-- 1, null, true, 'hello', undefined, false
+- reference type
+-- type created by programmer
+[] === []  // false
+- arrays are objects
+
+Context
+- this
+-- what object we are inside of
+- this is what's to the left of the function being called
+window.alert()
+window is this for alert
+const a = { b: function() { console.log(this)}}
+a.b();
+- this is a
+
+Instantiation
+- making a copy of an object and reusing the code
+
+class Player {
+  constructor(name, type) {
+    this.name = name;
+    this.type = type;
+  }
+  greet() {
+    console.log(`hiiiii I'm ${this.name} and my skills are of ${this.type}`);
+  }
+}
+
+class Wizard extends Player {
+  constructor(name, type) {
+    // since we are using extends, we must call super to inherit from Player
+    super(name, type);
+  }
+  roar() {
+    console.log(`I'm ${this.name} and my role is ${this.type}!!!`);
+  }
+}
+
+Treat Strings as an array in interviews
+
 
 Hash tables
 - collisions
@@ -76,6 +180,34 @@ Hash
 - cons
 -- unordered
 -- slow key iteration cuz it has to look up the whole table
+
+What is a hash function?
+- a function that generates a value of fixed length for every input it gets
+- it's one way, cannot figure out what the input is
+- it will always give the same value
+- idempotent
+-- a function givent an input will always output the same output
+
+Hash table
+- key > hash function (really fast O(1)) > maps to an address in memory
+
+What makes a good hash?
+1. Fast O(1)
+2. Doesn't cluster outputs at specific indices, but distributes uniformly
+3 Deterministic (same input same output)
+
+Hash_url = convert_to_base62(md5(original_url + random salt))(6)
+
+Base 62
+- Uses 62 possible ASCII letters 0-9, a-z, A-Z
+
+bcrypt
+- can hash password and salt for you
+
+salt
+- prefixed or appended to the key to hash out a unique hash
+- prevent collisions of the same key/password
+- random salt is stored in data store in plain text with hash and username
 
 LinkedList
 - pros

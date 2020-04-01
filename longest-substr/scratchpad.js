@@ -17,6 +17,32 @@
  * Note that the answer must be a substring, "pwke" is a subsequence and not a substring
  * 
  * ******************/
+
+/**
+ *  drawing board
+ *     s
+ *  "pwwkew"
+ *       i
+ * longest: 3
+ * seen: {p: 1, w: 3, k: 4, e: 5}
+ * **/
+// i: str o: number
 var lengthOfLongestSubstring = function(s) {
-    
+  // check input
+  let start = 0;
+  let seen = {};
+  let longest = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    let letter = s[i];
+    // seen
+    if (seen[letter]) {
+      start = Math.max(start, seen[letter]);
+    }
+    longest = Math.max(longest, i + 1 - start);
+    seen[letter] = i + 1;
+  }
+  return longest;
 };
+// O(n) O(n)
+

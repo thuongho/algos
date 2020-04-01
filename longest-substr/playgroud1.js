@@ -17,6 +17,25 @@
  * Note that the answer must be a substring, "pwke" is a subsequence and not a substring
  * 
  * ******************/
+// i: str o: number
+// 2 pointers start end
+/**
+ *     s
+ * i: "abcaebcbb"
+ *     i
+ * start: 0
+ * longest: 0
+ * seen: {}
+ **/
 var lengthOfLongestSubstring = function(s) {
-    
-};
+  // start
+  // longest
+  // seen
+  // loop string length
+    // if seen
+      // start is max of seen, start
+    // check longest
+    // i - start + 1
+    // update seen i + 1
+  // return longest
+};  

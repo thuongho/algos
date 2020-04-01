@@ -5,7 +5,7 @@
 
 // input array of int output max profit
 // [7,1,5,3,6,4]
-var maxProfit = function(prices) {
+var maxProfitFn = function(prices) {
   // ref min price index
   let minPriceIdx = 0;
   // ref max profit

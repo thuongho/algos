@@ -70,6 +70,14 @@ var lengthOfLongestSubstring = function(s) {
 };  // O(n) time O(1) space
 
 
+/**
+ *      s
+ * i: "abcaebcbb"
+ *           i
+ * start: 2
+ * longest: 4
+ * seen: {a: 4, b: 6, c: 3, e: 5}
+ **/
 // sliding window pattern
 function findLongestSubstring(str) {
   let longest = 0;
