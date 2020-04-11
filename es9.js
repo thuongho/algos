@@ -1,0 +1,1 @@
+a.reduce((acc, curr) => ({...acc, [curr.fruit]: curr.count}), {})
