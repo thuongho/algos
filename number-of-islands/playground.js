@@ -21,31 +21,9 @@ var numIslands = function(grid) {
   // count
   let count = 0;
   // build adjecencyList
-  const adjacencyList = {};
-  const islands = [];
+  const adjacencyList = buildAdjacencyList(grid);
+  
   const visited = {};
-  // loop rows grid.length
-  for (let r = 0; r < grid.length; r++) {
-    // inner loop cols grid[0].length
-    for (let c = 0; c < grid[0].length; c++) {
-      // if cell is 1 add to adjacentList
-      const cell = grid[r][c];
-      if (cell === '1') {
-        adjacencyList[[r,c]] = [];
-        islands.push([r,c]);
-        // check up down left right if they are 1 push position to adajcentList
-        // add neighbors
-        // up
-        if (grid[r - 1] && grid[r - 1][c] === '1') adjacencyList[[r,c]].push([r - 1, c]);
-        // down
-        if (grid[r + 1] && grid[r + 1][c] === '1') adjacencyList[[r,c]].push([r + 1, c]);
-        // left
-        if (c - 1 >= 0 && grid[r][c - 1] === '1') adjacencyList[[r,c]].push([r, c - 1]);
-        // right
-        if (c + 1 < grid[0].length && grid[r][c + 1] === '1') adjacencyList[[r,c]].push([r, c + 1]);
-      }
-    }
-  }
 
   // get keys of adjacent list
   // dfs
@@ -72,4 +50,33 @@ var numIslands = function(grid) {
   // return count
   return count;
 };
-// t O(n^2) O(n)
+// t O(n*m) O(n)
+
+function buildAdjacencyList(grid) {
+  const islands = [];
+  const adjacencyList = {};
+  // loop rows grid.length
+  for (let r = 0; r < grid.length; r++) {
+    // inner loop cols grid[0].length
+    for (let c = 0; c < grid[0].length; c++) {
+      // if cell is 1 add to adjacentList
+      const cell = grid[r][c];
+      if (cell === '1') {
+        adjacencyList[[r,c]] = [];
+        islands.push([r,c]);
+        // check up down left right if they are 1 push position to adajcentList
+        // add neighbors
+        // up
+        if (grid[r - 1] && grid[r - 1][c] === '1') adjacencyList[[r,c]].push([r - 1, c]);
+        // down
+        if (grid[r + 1] && grid[r + 1][c] === '1') adjacencyList[[r,c]].push([r + 1, c]);
+        // left
+        if (c - 1 >= 0 && grid[r][c - 1] === '1') adjacencyList[[r,c]].push([r, c - 1]);
+        // right
+        if (c + 1 < grid[0].length && grid[r][c + 1] === '1') adjacencyList[[r,c]].push([r, c + 1]);
+      }
+    }
+  }
+  return adjacencyList;
+}
+// O(n*m)
