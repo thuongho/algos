@@ -50,7 +50,7 @@ var numIslands = function(grid) {
   // return count
   return count;
 };
-// t O(n*m) O(n)
+// t O(r*c) O(n)
 
 function buildAdjacencyList(grid) {
   const islands = [];
@@ -79,4 +79,4 @@ function buildAdjacencyList(grid) {
   }
   return adjacencyList;
 }
-// O(n*m)
+// O(r*c)
