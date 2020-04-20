@@ -41,15 +41,17 @@ var search = function(nums, target) {
     if (target === midNum) return midpoint;
     const startNum = nums[start];
     if (target === startNum) return start;
+    const endNum = nums[end];
+    if (target === endNum) return end;
     // sorted start less than mid and target in btw
-    // pivot greater than mid greater than start
+    // sorted right and target not in btw
     if ((startNum < target && target < midNum) ||
-        ((midNum < nums[end]) && !(midNum < target && target <= nums[end]))) {
+        ((midNum < endNum) && !(midNum < target && target < endNum))) {
       // left
       return helper(start + 1, midpoint - 1);
     }
     // right
-    return helper(midpoint + 1, end);
+    return helper(midpoint + 1, end - 1);
   }
 };    
 // O(logn) O(1)
