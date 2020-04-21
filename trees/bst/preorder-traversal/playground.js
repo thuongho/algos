@@ -24,6 +24,31 @@ The values of preorder are distinct.
  * @param {number[]} preorder
  * @return {TreeNode}
  */
+// i: number arr  o: bst
 var bstFromPreorder = function(preorder) {
-    
+  // check inputs
+  // first number root
+  let root = null;
+  for (let num of preorder) {
+    root = helper(root, num);
+  }
+  return root;
+
+  // helper function arr node
+  function helper(node, val) {
+    const currNode = new TreeNode(val);
+    // break case
+    if (node === null) return currNode;
+    // left
+    if (val < node.val) {
+      node.left = helper(node.left, val);
+    }
+    // right
+    if (val > node.val) {
+      node.right = helper(node.right, val);
+    }
+    // return node
+    return node;
+  }
 };
+// O(n^2) O(n)
