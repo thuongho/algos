@@ -38,9 +38,9 @@ var groupAnagrams = function(strs) {
   // loop through cache and push to final array
   return Object.values(cache);
 };
-// O(n * m) O(n)
+// O(n * mlogm) O(n)
 
 function sortWordAscending(word) {
   return word.split('').sort((a,b) => a < b).join('');
 }
-// O(m) O(m)
+// O(mlogm) O(m)
