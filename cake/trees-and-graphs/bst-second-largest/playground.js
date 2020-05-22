@@ -21,47 +21,85 @@ class BinaryTreeNode {
 
 // i: node o: number
 function findSecondLargest(treeRoot) {
-  // Find the second largest item in the binary search tree
   // check input
-  if (!treeRoot || (!treeRoot.left && !treeRoot.right)) {
+  if (!treeRoot || (!treeRoot.left && !treeRoot.right))
     throw new Error('Must have at least 2 nodes');
-  }
-  // secondLargest
-  let secondLargest = null;
-  // max
+  // pointers
   let max = treeRoot.value;
-  let node = treeRoot;
+  let secondLargest = null;
 
-  // loop
+  let node = treeRoot;
   while (node) {
     // right exist
     if (node.right) {
-      // max right
+      secondLargest = max;
       max = node.right.value;
-      // second is current value
-      secondLargest = node.value;
       node = node.right;
 
       // else left only
     } else if (node.left) {
-      // largest second
       secondLargest = findLargest(node.left);
       node = null;
+
+      // no left or right
     } else {
       node = null;
     }
   }
-
   return secondLargest;
 }
 
 function findLargest(node) {
   if (!node) return;
-  while (node) {
-    if (!node.right) return node.value;
+  while (node.right) {
     node = node.right;
   }
+  return node.value;
 }
+
+// ------------------------
+// function findSecondLargest(treeRoot) {
+//   // Find the second largest item in the binary search tree
+//   // check input
+//   if (!treeRoot || (!treeRoot.left && !treeRoot.right)) {
+//     throw new Error('Must have at least 2 nodes');
+//   }
+//   // secondLargest
+//   let secondLargest = null;
+//   // max
+//   let max = treeRoot.value;
+//   let node = treeRoot;
+
+//   // loop
+//   while (node) {
+//     // right exist
+//     if (node.right) {
+//       // max right
+//       max = node.right.value;
+//       // second is current value
+//       secondLargest = node.value;
+//       node = node.right;
+
+//       // else left only
+//     } else if (node.left) {
+//       // largest second
+//       secondLargest = findLargest(node.left);
+//       node = null;
+//     } else {
+//       node = null;
+//     }
+//   }
+
+//   return secondLargest;
+// }
+
+// function findLargest(node) {
+//   if (!node) return;
+//   while (node) {
+//     if (!node.right) return node.value;
+//     node = node.right;
+//   }
+// }
 
 // function findLargest(node) {
 //   if (!node) return;
