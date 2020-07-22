@@ -8,7 +8,6 @@ We can't merge the current meeting with the previous one, so we know the previou
 **/
 
 function mergeRanges(meetings) {
-
   // Create a deep copy of the meetings array
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Deep_Clone
   const meetingsCopy = JSON.parse(JSON.stringify(meetings));
@@ -22,15 +21,17 @@ function mergeRanges(meetings) {
   const mergedMeetings = [sortedMeetings[0]];
 
   for (let i = 1; i < sortedMeetings.length; i++) {
-    const currentMeeting    = sortedMeetings[i];
+    const currentMeeting = sortedMeetings[i];
     const lastMergedMeeting = mergedMeetings[mergedMeetings.length - 1];
 
     // If the current meeting overlaps with the last merged meeting, use the
     // later end time of the two
     if (currentMeeting.startTime <= lastMergedMeeting.endTime) {
-      lastMergedMeeting.endTime = Math.max(lastMergedMeeting.endTime, currentMeeting.endTime);
+      lastMergedMeeting.endTime = Math.max(
+        lastMergedMeeting.endTime,
+        currentMeeting.endTime
+      );
     } else {
-
       // Add the current meeting since it doesn't overlap
       mergedMeetings.push(currentMeeting);
     }
@@ -38,4 +39,4 @@ function mergeRanges(meetings) {
 
   return mergedMeetings;
 }
-// O(nlgn) time and O(n)O(n) space.
+// O(nlgn) time and O(n) space.
