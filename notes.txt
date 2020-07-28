@@ -10,10 +10,16 @@ Big O Rule Asymptotic Analysis
 3. Space Complexity
 
 - What skills interviewer is looking for-
-- Analytic skills - how can you think through problems and analyze things?
-- Coding skills - do you code well, by writing clean, simple, organized, readable code?
-- Technical knowledge - do you know the fundamentals of the job you're applying for?
-- Communication skills - does your personality match the companies' culture?
+Analytic skills
+- how can you think through problems and analyze things?
+Coding skills 
+- do you code well, by writing clean, simple, organized, readable code?
+Technical knowledge 
+- do you know the fundamentals of the job you're applying for?
+Communication skills 
+- does your personality match the companies' culture?
+
+Know the "WHY" is this answer better than the other
 
 -= How to solve a problem =-
 1. When the interviewer says the question, write down the key points at the top (i.e. sorted array). Make sure you have all the details. Show how organized you are.
