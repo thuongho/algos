@@ -38,8 +38,7 @@ var validMountainArray = function (A) {
 
   // previous number
   // current number
-  let prevIdx = 0;
-  let prevNum = A[prevIdx];
+  let prevNum = A[0];
   let currIdx = 1;
   let currNum = A[currIdx];
   const length = A.length;
@@ -54,17 +53,19 @@ var validMountainArray = function (A) {
 
     // upward slope
     // current number > prev
-    if (slope === 0 || slope === 1) {
-      if (currNum < prevNum) {
-        slope = -1;
-      }
+    if (slope >= 0) {
+      slope = currNum < prevNum ? -1 : 1;
     } else {
       // downward slope
       // current number < prev
       // slope is upward return false
       if (currNum > prevNum) return false;
     }
+    currIdx++;
+    prevNum = currNum;
+    currNum = A[currIdx];
   }
 
   // return true
+  return slope === -1;
 };
