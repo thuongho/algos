@@ -57,4 +57,5 @@ var removeDuplicates = function (nums) {
     // increment the end
     end++;
   }
+  nums.splice(start + 1, nums.length);
 };
