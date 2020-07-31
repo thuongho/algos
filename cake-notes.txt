@@ -50,3 +50,44 @@ The 256 possibilities we get with 1 byte are pretty limiting. So we usually use 
 64-bit integers have 2^64 possible values—more than 10 billion billion (10^19)
 Ever created a table in SQL? When you specify that a column will hold integers, you have to specify how many bytes: 1 byte (tinyint), 2 bytes (smallint), 4 bytes (int), or 8 bytes (bigint).
 Most integers are fixed-width or fixed-length, which means the number of bits they take up doesn't change.
+So fixed-width integers are very space efficient and time efficient.
+But that efficiency comes at a cost—their values are limited. Specifically, they're limited to 2^n possibilities, where nn is the number of bits.
+
+Arrays
+RAM is basically an array already
+Just like with RAM, the elements of an array are numbered. We call that number the index of the array element (plural: indices). In this example, each array element's index is the same as its address in RAM
+Together, this means looking up the contents of a given array index is O(1)O(1) time. This fast lookup capability is the most important property of arrays.
+But the formula we used to get the address of the nnth item in our array only works if:
+Each item in the array is the same size (takes up the same number of bytes).
+The array is uninterrupted (contiguous) in memory. There can't be any gaps in the array...like to "skip over" a memory slot Spotify was already using.
+
+Strings
+A series of characters (letters, punctuation, etc.) is called a string.
+We already know one way to store a series of things—arrays. But how can an array store characters instead of numbers?
+Easy. Let's define a mapping between numbers and characters. Let's say "A" is 1 (or 0000 0001 in binary), "B" is 2 (or 0000 0010 in binary), etc. Bam. Now we have characters.
+This mapping of numbers to characters is called a character encoding. One common character encoding is "ASCII". Here's how the alphabet is encoded in ASCII:
+A: 01000001 S: 01010011 k: 01101011
+B: 01000010 T: 01010100 l: 01101100
+C: 01000011 U: 01010101 m: 01101101
+D: 01000100 V: 01010110 n: 01111110
+E: 01000101 W: 01010111 o: 01101111
+F: 01000110 X: 01011000 p: 01110000
+G: 01000111 Y: 01011001 q: 01110001
+H: 01001000 Z: 01011010 r: 01110010
+I: 01001001 a: 01100001 s: 01110011
+J: 01001010 b: 01100010 t: 01110100
+K: 01001011 c: 01100011 u: 01110101
+L: 01001100 d: 01100100 v: 01110110
+M: 01001101 e: 01100101 w: 01110111
+N: 01001110 f: 01100110 x: 01111000
+O: 01001111 g: 01100111 y: 01111001
+P: 01010000 h: 01101000 z: 01111010
+Q: 01010001 i: 01101001 
+R: 01010010 j: 01101010
+
+
+Pointers
+Strings are arrays
+store strings in an array
+since each string can be different length, we'll store numbers in the array that points to different blocks containing the stored string
+The pointers are marked with a * at the beginning. *457 -> 536[B,i,l,l]539
