@@ -91,3 +91,7 @@ Strings are arrays
 store strings in an array
 since each string can be different length, we'll store numbers in the array that points to different blocks containing the stored string
 The pointers are marked with a * at the beginning. *457 -> 536[B,i,l,l]539
+The tradeoff. This pointer-based array requires less uninterrupted memory and can accommodate elements that aren't all the same size, but it's slower because it's not cache-friendly.
+
+
+Dynamic Arrays
